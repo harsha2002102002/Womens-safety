@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/select_contact_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rect"
+        android:gravity="center"
+        android:text="Select Contact"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:id="@+id/sos_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_contact_button"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rect"
+        android:textOff="SOS OFF"
+        android:textOn="SOS ON"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:id="@+id/voice_automation_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sos_toggle"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rect"
+        android:textOff="Voice Automation OFF"
+        android:textOn="Voice Automation ON"
+        android:textStyle="bold" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:layout_above="@id/legend_layout"
+        android:layout_below="@id/voice_automation_toggle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="66dp" />
+
+    <LinearLayout
+        android:id="@+id/legend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:background="#00FF00"
+            android:padding="4dp"
+            android:text="Green Zone: Safe Area"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="#FFA500"
+            android:padding="4dp"
+            android:text="Orange Zone: Moderate Risk"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:background="#FF0000"
+            android:padding="4dp"
+            android:text="Red Zone: High Risk"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="#800080"
+            android:padding="4dp"
+            android:text="Purple Circle: Police Station"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>
